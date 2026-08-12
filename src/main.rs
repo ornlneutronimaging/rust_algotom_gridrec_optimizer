@@ -51,7 +51,7 @@ fn main() -> eframe::Result<()> {
         "AlgoTom GridRec Optimizer",
         native_options,
         Box::new(move |cc| {
-            cc.egui_ctx.set_theme(egui::Theme::Dark);
+            cc.egui_ctx.set_theme(algotom_gridrec_optimizer::theme::load());
             Ok(Box::new(OptimizerApp::new(input, called_from_app)))
         }),
     )
