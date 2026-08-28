@@ -52,6 +52,8 @@ fn main() -> eframe::Result<()> {
         native_options,
         Box::new(move |cc| {
             cc.egui_ctx.set_theme(algotom_gridrec_optimizer::theme::load());
+            cc.egui_ctx
+                .set_zoom_factor(algotom_gridrec_optimizer::zoom::load());
             Ok(Box::new(OptimizerApp::new(input, called_from_app)))
         }),
     )
